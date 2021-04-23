@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let name = document.getElementById('name');
+            const nameSplit = () => {
+                let str = name.value;
+                let arr = str.split(' ');
+                for (let index = 0; index < arr.length ; index++) {
+                    let input = document.createElement('input');
+                    input.value = arr[index];
+                    let parent = document.body;
+                    parent.appendChild(input);
+                }
+            }
+            name.addEventListener('blur', nameSplit);
+        };
+    </script>
+</head>
+<body>
+    <input type="text" id="name">
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let name = document.getElementById('name');
+            const calcWord = () => {
+                let x = name.value.split(' ').length;
+                console.log(x);             
+            }
+            name.addEventListener('blur', calcWord);
+        };
+    </script>
+</head>
+<body>
+    <input type="text" id="name">
+</body>
+</html>

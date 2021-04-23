@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let numbers = document.getElementsByClassName('numbers');
+            let plus = document.getElementById('btn');
+            let summValue = document.getElementById('summValue');
+            function summ() {
+                let result = 0;
+                for (let index = 0; index < numbers.length; index++) {
+                    result = result + +numbers[index].value;
+                }
+                summValue.innerHTML = result;
+            }
+            plus.addEventListener('click', summ);
+        };
+    </script>
+</head>
+<body>
+    <input type="text" class="numbers">
+    <input type="text" class="numbers">
+    <input type="text" class="numbers">
+    <input type="submit" id="btn">
+    <p id="summValue"></p>
+</body>
+</html>

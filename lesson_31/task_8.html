@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let name = document.getElementById('name');
+            const calcWord = () => {
+                let str = name.value;
+                let arr = str.split(' ');
+                let result = 0;
+                for (let index = 0; index < arr.length; index++) {
+                    if (arr[index].split('').length >= result) {
+                        result = arr[index].split('').length
+                    }
+                }
+                console.log(result);
+            }
+            name.addEventListener('blur', calcWord);
+        };
+    </script>
+</head>
+<body>
+    <input type="text" id="name">
+</body>
+</html>

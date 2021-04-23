@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let num = document.getElementById('num');
+            let summ = document.getElementById('summ');
+            function summOfNumber() {
+                let str = num.value;
+                let arr = str.split('');
+                let result = 0;
+                for (let index = 0; index < arr.length ; index++) {
+                    result = result + +arr[index];
+                }
+                summ.innerHTML = result;
+            }
+            num.addEventListener('blur', summOfNumber);
+        };
+    </script>
+</head>
+<body>
+    <input type="text" id="num">
+    <p id="summ"></p>
+</body>
+</html>

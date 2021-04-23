@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let name = document.getElementById('name');
+            const nameUp = () => {
+                let str = name.value;
+                console.log(str);
+                let arr = str.split(' ');
+                for (let index = 0; index < arr.length ; index++) {
+                    arr[index] = arr[index].split('');
+                    arr[index][0] = arr[index][0].toUpperCase();
+                    arr[index] = arr[index].join('');                   
+                }
+                name.value = arr.join(' ');
+            }
+            name.addEventListener('blur', nameUp);
+        };
+    </script>
+</head>
+<body>
+    <input type="text" id="name">
+</body>
+</html>
