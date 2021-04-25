@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let result = document.getElementById('result');
+            let plus = document.getElementById('plus');
+            let minus = document.getElementById('minus');
+            function plusOne(x) {
+                result.value = +result.value + 1;
+            }
+            function minusOne() {
+                if ( result.value >= 1) {
+                    result.value = +result.value - 1;
+                }  
+            }
+            plus.addEventListener('click', plusOne);
+            minus.addEventListener('click', minusOne);
+        };
+    </script>
+</head>
+<body>
+    <input id="result" type="text">
+    <button id="plus">+1</button>
+    <button id="minus">-1</button>
+</body>
+</html>
