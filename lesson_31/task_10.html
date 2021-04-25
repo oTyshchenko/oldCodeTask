@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let date = document.getElementById('date');
+            let btn = document.getElementById('btn')
+            const DateB = () => {
+                let dateNow = new Date();
+                let yearNow = dateNow.getFullYear();
+                let result = document.getElementById('result');
+                result.innerHTML = +yearNow - +date.value;;
+            }
+            btn.addEventListener('click', DateB);
+        };
+    </script>
+</head>
+<body>
+    <input type="text" id="date">
+    <button id="btn">click</button>
+    <p id="result"></p>
+</body>
+</html>

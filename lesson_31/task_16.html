@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let links = document.getElementsByTagName('a');
+            for (let index = 0; index < links.length; index++) {
+                links[index].innerHTML = links[index].innerHTML + links[index].href;          
+            }
+        };
+    </script>
+</head>
+<body>
+    <a href="https://www.facebook.com/">a </a>
+    <br>
+    <a href="3">a </a><a href="2">a </a><a href="2">a </a><a href="4">a </a><a href="3">a </a><a href="3">a </a><a href="4">a </a>
+</body>
+</html>

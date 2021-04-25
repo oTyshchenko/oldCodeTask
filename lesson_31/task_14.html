@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let btn = document.getElementById('btn');
+            const numberOfP = () => {
+                let paragrafs = document.getElementsByTagName('p');
+                for (let index = 0; index < paragrafs.length; index++) {
+                    paragrafs[index].innerHTML = paragrafs[index].innerHTML + ' ' + (index + 1);              
+                }
+            }
+            btn.addEventListener('click', numberOfP);
+        };
+    </script>
+</head>
+<body>
+    <p>d</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <button id="btn">start</button>
+</body>
+</html>

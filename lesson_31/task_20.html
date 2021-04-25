@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let images = document.getElementsByTagName('img');
+            for (let i = 0; i < images.length; i++) {
+                images[i].addEventListener('click', bigSize)
+            }
+            function bigSize () {
+                this.height = this.height * 2;
+                this.removeEventListener('click', bigSize); 
+                this.addEventListener('click', smallSize);
+            }
+            function smallSize () {
+                this.height = this.height / 2;
+                this.removeEventListener('click', smallSize);  
+                this.addEventListener('click', bigSize);
+            }
+        };
+    </script>
+</head>
+<body>
+    <img src="img/1.jpg" alt="">
+    <img src="img/2.jpg" alt="">
+    <img src="img/3.jpg" alt="">
+</body>
+</html>

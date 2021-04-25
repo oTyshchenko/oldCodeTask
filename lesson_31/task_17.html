@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let links = document.getElementsByTagName('a');
+            for (let i = 0; i < links.length; i++) {
+                if (links[i].href.indexOf('https://') == 0) {
+                    links[i].innerHTML = links[i].innerHTML + '→';
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <a href="fd">link 1</a><br>
+    <a href="https://www.facebook.com/">link 2</a><br>
+    <a href="sss">link 3</a><br>
+</body>
+</html>

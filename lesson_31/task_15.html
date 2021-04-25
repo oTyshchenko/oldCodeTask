@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let btn = document.getElementById('btn');
+            let result = document.getElementById('result')
+            const fromLowToUp = () => {
+                let paragrafs = document.getElementsByTagName('p');
+                let arr = [];
+                for (let i = 0; i < paragrafs.length; i++) {
+                    arr[i] = +paragrafs[i].innerHTML;
+                }
+                function compareNumeric(a, b) {
+                    if (a > b) return 1;
+                    if (a == b) return 0;
+                    if (a < b) return -1;
+                }
+                let arr2 = arr.sort(compareNumeric);
+                result.value = arr2;
+            }
+            btn.addEventListener('click', fromLowToUp);
+        };
+    </script>
+</head>
+<body>
+    <p>2</p>
+    <p>14</p>
+    <p>1</p>
+    <p>2</p>
+    <p>22</p>
+    <p>23</p>
+    <p>23</p>
+    <button id="btn">start</button>
+    <input type="text" id="result">
+</body>
+</html>

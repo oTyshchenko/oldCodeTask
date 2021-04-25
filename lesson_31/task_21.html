@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let images = document.getElementsByClassName('img');
+            let bigImg = document.getElementById('result');
+            for (let i = 0; i < images.length; i++) {
+                images[i].addEventListener('click', newImg);
+            }
+            function newImg() {
+                bigImg.src =  this.src;
+                bigImg.width = 50;
+            }
+        };
+    </script>
+</head>
+<body>
+    <img src="img/1.jpg" alt="" class="img" width="30">
+    <img src="img/2.jpg" alt="" class="img" width="30">
+    <img src="img/3.jpg" alt="" class="img" width="30">
+    <br>
+    <img id="result">
+</body>
+</html>

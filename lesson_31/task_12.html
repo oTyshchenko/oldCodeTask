@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let str = document.getElementById('str');
+            let btn = document.getElementById('btn');
+            let result = document.getElementById('result');
+            const palindrom = () => {
+                let arr = str.value.split('').reverse();
+                let arr2 = str.value.split('')
+                for (let index = 0; index < arr2.length; index++) {    
+                    if (arr2[index] !== arr[index]) {
+                        result.innerHTML = 'ne palindrom';
+                        return;
+                    }   result.innerHTML = 'palindrom';
+                        return;
+                }
+            }
+            btn.addEventListener('click', palindrom);
+        };
+    </script>
+</head>
+<body>
+    <input type="text" id="str">
+    <button id="btn">start</button>
+    <p id="result"></p>
+</body>
+</html>
