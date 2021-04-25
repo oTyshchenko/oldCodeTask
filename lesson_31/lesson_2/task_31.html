@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let num = document.getElementById('num');
+            let tikTak = document.getElementById('tikTak');
+            function go() {
+                tikTak.innerHTML = num.value;
+                window.timerID = window.setInterval(timer, 1000);
+                function timer() {
+                    if (tikTak.innerHTML === '0') {
+                        window.clearInterval(window.timerID);
+                    } else {
+                        tikTak.innerHTML = +tikTak.innerHTML -1;
+                    }
+                }
+                
+            }
+            num.addEventListener('blur', go)
+        }
+    </script>
+</head>
+<body>
+   <input type="number" id="num">
+   <p id="tikTak"></p>
+</body>
+</html>

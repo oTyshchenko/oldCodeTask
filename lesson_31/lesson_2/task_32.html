@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let par = document.getElementById('par');
+            window.timerId = window.setInterval(red, 1000);
+            function red() {
+                par.style.color = 'red';
+                window.clearInterval(window.timerId);
+                window.timerIdd = window.setInterval(green, 1000);
+            }
+            function green() {
+                par.style.color = 'green';
+                window.clearInterval(window.timerIdd);
+                window.timerId = window.setInterval(red, 1000);
+            }
+        }
+    </script>
+</head>
+<body>
+   <p id="par">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos atque laudantium voluptatum perferendis ea minima libero praesentium, tempora dolor tenetur eius nulla? Architecto perferendis saepe laudantium eius consectetur possimus id?</p>
+</body>
+</html>

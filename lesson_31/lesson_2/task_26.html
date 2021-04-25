@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let paragrafs = document.getElementsByTagName('p');
+            let clicker = document.getElementById('clicker');
+            function summOfClick() {
+                clicker.value = +clicker.value + 1;
+            }
+            for (let i = 0; i < paragrafs.length; i++) {
+                paragrafs[i].addEventListener('click', summOfClick);
+            }
+        };
+    </script>
+</head>
+<body>
+    <p>1</p>
+    <p>3</p>
+    <p>4</p>
+    <p>7222</p>
+    <p>1</p>
+    <p>222345</p>
+    <p>789</p>
+    <p>79</p>
+    <input type="text" id="clicker" disabled="true">
+</body>
+</html>

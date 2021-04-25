@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let generator = document.getElementById('generator');
+            let text = document.getElementById('text');
+            let y = document.getElementById('y');
+            function someStr() {
+                let str = '';
+                let sumbols = '0123456789qwertyuiopasdfghjklzxcvbnm';
+                for (let i = 0; i < Number(y.value); i++) {
+                str = str +sumbols.charAt(Math.floor(Math.random() * sumbols.length));
+                text.value = str;
+                }
+            }
+            generator.addEventListener('click', someStr);
+        };
+    </script>
+</head>
+<body>
+    <input type="text" id="text">
+    <input type="number" id="y" placeholder="введите количество символов строки">
+    <button id="generator">generator</button>
+</body>
+</html>

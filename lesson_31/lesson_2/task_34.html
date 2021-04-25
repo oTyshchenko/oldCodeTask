@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let par = document.getElementById('par');
+            let next = document.getElementById('next');
+            let arr = ['один', 'два', 'три'];
+            let i = 0;
+            par.innerHTML = arr[i];
+            function nextPage() {
+                if (i == arr.length -1) {
+                   i = 0;
+                   par.innerHTML = arr[i];
+                } else {
+                i++;
+                par.innerHTML = arr[i];
+                }
+            }
+            next.addEventListener('click', nextPage);
+        }
+    </script>
+</head>
+<body>
+   <p id="par"></p>
+   <a id="next">next</a>
+</body>
+</html>

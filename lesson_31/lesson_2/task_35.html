@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let numbers = document.getElementsByTagName('input');
+            window.setInterval(timer, 1000);
+            let i = 0;
+            let counter = 1
+            function timer() {
+                numbers[i].value = counter++;
+                i++;
+                if(i === numbers.length) {
+                    i = 0;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+   <input type="text"><input type="text"><input type="text">
+</body>
+</html>

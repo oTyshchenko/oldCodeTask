@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            window.setInterval(timer, 1000);
+            let squad = document.getElementById('squad');
+            function timer() {
+                squad.value = squad.value * squad.value;
+            }
+        };
+    </script>
+</head>
+<body>
+    <input type="text" id="squad" value="2">
+</body>
+</html>

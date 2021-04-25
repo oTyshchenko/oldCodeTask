@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let par = document.getElementById('par');
+            let arr = ['red', 'green', 'blue'];
+            window.timerId = window.setInterval(changeColor, 1000);
+            let i = 0;
+            function changeColor() {
+                par.style.color = arr[i];
+                i++
+                if (i === arr.length) {
+                    i = 0
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+   <p id="par">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos atque laudantium voluptatum perferendis ea minima libero praesentium, tempora dolor tenetur eius nulla? Architecto perferendis saepe laudantium eius consectetur possimus id?</p>
+</body>
+</html>
