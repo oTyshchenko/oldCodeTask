@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let result = document.getElementById('result');
+            let plusBtn = document.getElementById('plusBtn');
+            let reset = document.getElementById('reset');
+            let numbers = document.getElementsByTagName('td');
+            let x = 0;
+            function active() {
+                this.style.background = 'red';
+                x = x + +this.innerHTML;
+                this.removeEventListener('click', active);
+            }
+            function summOfActivNumber() {
+                result.value = x;
+            }
+            function nullOfActivNumber() {
+                for (let i = 0; i < numbers.length; i++) {
+                    numbers[i].style.background = 'none';
+                    numbers[i].addEventListener('click', active);              
+                }
+                x = 0;
+                result.value = '';
+            }
+            for (let i = 0; i < numbers.length; i++) {
+                    numbers[i].addEventListener('click', active);                    
+                }
+            plusBtn.addEventListener('click', summOfActivNumber);
+            reset.addEventListener('click', nullOfActivNumber);
+
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>25</td>
+            <td>11</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>54</td>
+            <td>13</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>23</td>
+            <td>6</td>
+        </tr>
+    </table>
+    <input type="text" id="result">
+    <button id="plusBtn">+</button>
+    <button id="reset">reset</button>
+</body>
+</html>

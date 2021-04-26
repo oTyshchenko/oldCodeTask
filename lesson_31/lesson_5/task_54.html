@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let countries = document.getElementById('countries');
+            let cityArr = {
+                'Ukr': ['kyiv', 'lviv', 'odessa'],
+                'USA': ['new-york', 'pasadena', 'missuri'],
+                'France': ['paris', 'marsele', 'verona']
+            }
+            function displayCity() {
+                let cities = document.getElementById('cities');
+                cities.innerHTML = '';
+                let selectedCountry = countries.value;
+                for (let i = 0; i < cityArr[selectedCountry].length; i++) {
+                     let newOption = document.createElement('option');
+                     newOption.innerHTML = cityArr[selectedCountry][i];
+                     cities.appendChild(newOption);
+                }
+            }
+            function toPar() {
+                let x = document.getElementById('x');
+                x.innerHTML = '';
+                x.innerHTML = countries.value + ', ' + cities.value;
+            }
+            countries.addEventListener('change', displayCity);
+            countries.addEventListener('change', toPar);
+            cities.addEventListener('change', toPar);
+        }
+    </script>
+</head>
+<body>
+    <select name="" id="countries">
+        <option>Ukr</option>
+        <option>USA</option>
+        <option>France</option>
+    </select>
+    <select id="cities"></select>
+    <p id="x"></p>
+</body>
+</html>

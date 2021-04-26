@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let countryName = document.getElementById('countryName');
+            let countries = document.getElementById('countries');
+            countryName.addEventListener('keypress', addNewCountry)
+            function addNewCountry(event) {
+                if (event.keyCode == 13) {
+                    countries.innerHTML = countries.innerHTML + countryName.value + ', ';
+                    countryName.value = '';
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+   <input type="text" id="countryName">
+   <p id="countries"></p>
+</body>
+</html>

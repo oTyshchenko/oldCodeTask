@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+			let wTable = document.getElementById('width');
+			let hTable = document.getElementById('height');
+			let btn = document.getElementById('btn');
+			let t = document.getElementById('t');
+			function tableCreator() {
+				t.innerHTML = '';
+				for (let i = 0; i < +wTable.value; i++) {
+					let tr = document.createElement('tr');
+					t.appendChild(tr);
+				}
+				let rows = document.getElementsByTagName('tr')
+				for (let j = 0; j < rows.length; j++) {
+					for (let k = 0; k < hTable.value; k++) {
+						let td = document.createElement('td');
+						td.innerHTML = 'a';
+						rows[j].appendChild(td);
+					}
+				}
+			}
+			btn.addEventListener('click', tableCreator)
+        }
+    </script>
+</head>
+<body>
+	<input type="text" id="width" placeholder="write number rows of table">
+	<input type="text" id="height" placeholder="write number colums of table">
+	<button id="btn">create table</button>
+	<table id="t"></table>
+</body>
+</html>

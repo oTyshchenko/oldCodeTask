@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let boxes = document.getElementsByTagName('div');
+            let str = '';
+            for (let i = 0; i < boxes.length; i++) {
+                str = boxes[i].innerHTML.slice(0, 10) + '...';
+                boxes[i].innerHTML = str;
+            }
+        }
+    </script>
+</head>
+<body>
+   <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit dolorem tempore adipisci possimus pariatur. Quo quisquam, eos corrupti nisi atque aspernatur non, minima ducimus soluta adipisci impedit? Molestiae, numquam cumque!</div>
+   <div>dfffffffffffffsLorem ipsum dolor sit amet, consectetur adipisicing elit. Sit dolorem tempore adipisci possimus pariatur. Quo quisquam, eos corrupti nisi atque aspernatur non, minima ducimus soluta adipisci impedit? Molestiae, numquam cumque!</div>
+   <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit dolorem tempore adipisci possimus pariatur. Quo quisquam, eos corrupti nisi atque aspernatur non, minima ducimus soluta adipisci impedit? Molestiae, numquam cumque!</div>
+   <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit dolorem tempore adipisci possimus pariatur. Quo quisquam, eos corrupti nisi atque aspernatur non, minima ducimus soluta adipisci impedit? Molestiae, numquam cumque!</div>
+</body>
+</html>

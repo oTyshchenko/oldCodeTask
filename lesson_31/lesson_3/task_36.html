@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let link = document.getElementById('link');
+            let check = document.getElementById('check');
+            function change() {
+                if (check.checked == false) {
+                    check.checked = true;
+                } else if (check.checked == true) {
+                    check.checked = false;
+                }
+            }
+            link.addEventListener('click', change)
+        }
+    </script>
+</head>
+<body>
+   <a id="link">link</a>
+   <input type="checkbox" name="" id="check">
+</body>
+</html>

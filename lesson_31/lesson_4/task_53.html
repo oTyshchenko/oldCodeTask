@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let countries = document.querySelectorAll('p');
+            for (let i = 0; i < countries.length; i++) {
+                countries[i].addEventListener('click', show);
+            }
+            function show() {
+                this.nextElementSibling.style.display = 'block';
+                this.removeEventListener('click', show);
+                this.addEventListener('click', hide);
+            }
+            function hide() {
+                this.nextElementSibling.style.display = 'none';
+                this.addEventListener('click', show);
+                this.removeEventListener('click', hide);
+            }
+        }
+    </script>
+</head>
+<body>
+    <ul>
+        <li>
+            <p>hhh</p>
+            <ul hidden>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </li>
+        <li>
+            <p>hhh</p>
+            <ul hidden>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </li>
+        <li>
+            <p>hhh</p>
+            <ul hidden>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </li>
+        <li>
+            <p>hhh</p>
+            <ul hidden>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </li>
+        <li>
+            <p>hhh</p>
+            <ul hidden>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

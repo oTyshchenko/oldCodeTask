@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let btn = document.getElementById('btn');
+            let result = document.getElementById('result')
+            function sortNumber() {
+                let x = document.getElementsByTagName('td');
+                let arr = []
+                for (let i = 0; i < x.length; i++) {
+                    arr[i] = +x[i].innerHTML;
+                }
+                function compareNumeric(a, b) {
+                    if (a > b) return 1;
+                    if (a == b) return 0;
+                    if (a < b) return -1;
+                }
+                let arr2 = arr.sort(compareNumeric);
+                result.value = arr2;
+            }
+            btn.addEventListener('click', sortNumber)
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>88444</td>
+            <td>2222</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>161</td>
+        </tr>
+    </table>
+    <button id="btn">*</button>
+    <input type="text" id="result">
+</body>
+</html>

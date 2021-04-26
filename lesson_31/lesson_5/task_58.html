@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+			let btn = document.getElementById('btn');
+			let items = document.getElementsByTagName('li');
+			let list = document.getElementById('list');
+			function sortList() {
+				let arr = [];
+				for (let i = 0; i < items.length; i++) {
+					arr[i] = +items[i].innerHTML;
+				}
+				function compareNumeric(a, b) {
+                    if (a > b) return 1;
+                    if (a == b) return 0;
+                    if (a < b) return -1;
+                }
+				let arr2 = arr.sort(compareNumeric);
+				list.innerHTML = '';
+				for (let j = 0; j < arr2.length; j++) {
+					let newLi = document.createElement('li');
+					newLi.innerHTML = arr2[j];
+					list.appendChild(newLi);				
+				}
+			}
+			btn.addEventListener('click', sortList);
+        }
+    </script>
+</head>
+<body>
+	<button id="btn">sort</button>
+	<ul id="list">
+		<li>1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>1</li>
+		<li>43</li>
+		<li>-12</li>
+		<li>123</li>
+		<li>432</li>
+		<li>12</li>
+		<li>1231</li>
+	</ul>
+</body>
+</html>

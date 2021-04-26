@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let result = document.getElementById('result');
+            let inputs = document.getElementsByTagName('input');
+            for (let i = 0; i < inputs.length; i++) {
+                inputs[i].addEventListener('click', go);
+            }
+            function go() {
+                result.innerHTML = this.value;
+            }
+        }
+    </script>
+</head>
+<body>
+   <p>Какой язык вы знаете?</p>
+   <input type="radio" name="language" value="html">html<br>
+   <input type="radio" name="language" value="css">css<br>
+   <input type="radio" name="language" value="js">js<br>
+   <input type="radio" name="language" value="php">php<br>
+   <p id="result"></p>
+</body>
+</html>

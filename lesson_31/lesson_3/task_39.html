@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let result = document.getElementById('result');
+            let inputs = document.getElementsByTagName('input');
+            let arr = [];
+            for (let i = 0; i < inputs.length; i++) {
+                inputs[i].addEventListener('click', go);
+            }
+            function go() {
+                if (this.checked) {
+                    arr.push(this.value);
+                    result.innerHTML = arr;
+                } 
+            }
+        }
+    </script>
+</head>
+<body>
+   <p>Какой язык вы знаете?</p>
+   <input type="checkbox" name="language" value="html">html<br>
+   <input type="checkbox" name="language" value="css">css<br>
+   <input type="checkbox" name="language" value="js">js<br>
+   <input type="checkbox" name="language" value="php">php<br>
+   <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let countries = document.getElementById('countries');
+            let countriesNameList = document.getElementById('countriesNameList');
+            let go = document.getElementById('go');
+            function createLi() {
+                let arr = countries.value.split(', ');
+                for (let i = 0; i < arr.length; i++) {
+                    let newLi = document.createElement('li');
+                    newLi.innerHTML = arr[i];
+                    countriesNameList.appendChild(newLi);
+                }
+            }
+            go.addEventListener('click', createLi);
+        }
+    </script>
+</head>
+<body>
+   <input type="text" id="countries">
+   <button id="go">go</button>
+   <ul id="countriesNameList"></ul>
+</body>
+</html>

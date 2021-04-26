@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let exchange = {'grn': [1], 'usd':[27], 'eur':[32]};
+			let num = document.getElementById('num');
+			let inner = document.getElementById('inner');
+			let out = document.getElementById('out');
+			function calc() {
+				let result = document.getElementById('result');
+				if (exchange[inner.value] !== exchange[out.value]) {
+					result.innerHTML = +num.value * (exchange[inner.value] / exchange[out.value]);
+				} else {
+					result.innerHTML = "another"
+				}
+			}
+			num.addEventListener('blur', calc);
+        }
+    </script>
+</head>
+<body>
+	<select id="inner">
+		<option value="grn">гривня</option>
+		<option value="usd">долар</option>
+		<option value="eur">євро</option>
+	</select>
+	<select id="out">
+		<option value="grn">гривня</option>
+		<option value="usd">долар</option>
+		<option value="eur">євро</option>
+	</select>
+	<input type="text" id="num">
+	<p id="result"></p>
+</body>
+</html>

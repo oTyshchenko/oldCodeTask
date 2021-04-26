@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let x = document.getElementsByTagName('td');
+            let btn = document.getElementById('btn');
+            function findMax() {
+                let max = 0;
+                let n = 0;
+                for (let i = 0; i < x.length; i++) {
+                    if (+x[i].innerHTML >= max) {
+                        max = +x[i].innerHTML;
+                        n = i;
+                    }
+                }
+                x[n].style.background = 'red';
+            }
+            btn.addEventListener('click', findMax)
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>1</td>
+            <td>3</td>
+        </tr>
+        <tr>
+            <td>88444</td>
+            <td>2222</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>11</td>
+        </tr>
+    </table>
+    <button id="btn">*</button>
+</body>
+</html>

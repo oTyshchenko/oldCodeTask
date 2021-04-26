@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let par = document.getElementById('par');
+            let cross = document.getElementById('cross');
+            let bold = document.getElementById('bold');
+            let red = document.getElementById('red');
+            function getCross() {
+                if (cross.checked) {
+                    par.style.textDecoration ='line-through';
+                } else {
+                    par.style.textDecoration ='';
+                }
+            }
+            function getBold() {
+                if (bold.checked) {
+                    par.style.fontWeight ='bold';
+                } else {
+                    par.style.fontWeight ='';
+                }
+            }
+            function getRed() {
+                if (red.checked) {
+                    par.style.color ='red';
+                } else {
+                    par.style.color ='';
+                }
+            }
+            cross.addEventListener('click', getCross);
+            bold.addEventListener('click', getBold);
+            red.addEventListener('click', getRed);
+        }
+    </script>
+</head>
+<body>
+   <label><input type="checkbox" name="" id="cross">перечеркнуть</label><br>
+   <label><input type="checkbox" name="" id="bold">сделать жирным</label><br>
+   <label><input type="checkbox" name="" id="red">сделать красным</label><br>
+   <p id="par">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit itaque aliquid ratione commodi doloribus perferendis iusto numquam vero fugit ipsam! Quasi quaerat sint molestias illum iste quidem quisquam dicta quod?</p>
+</body>
+</html>

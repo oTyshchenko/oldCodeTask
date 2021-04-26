@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+	<style>
+		.active {
+			background-color: red;
+		}
+	</style>
+    <script>
+        window.onload = function() {
+			let links = document.getElementsByTagName('a');
+			let result = document.getElementById('result');
+			function goActive() {
+				for (let j = 0; j < links.length; j++) {
+					links[j].classList.remove('active');
+				}
+				this.classList.add('active')
+				result.innerHTML = this.innerHTML;
+			}
+			for (let i = 0; i < links.length; i++) {
+				links[i].addEventListener('click', goActive);
+			}
+        }
+    </script>
+</head>
+<body>
+	<a>1</a><br><a>2</a><br><a>3</a><br><a>4</a><br><a>5</a><br><a>6</a><br><a>7</a><br><a>8</a><br><a>9</a><br><a>10</a><br>
+	<p id="result"></p>	
+</body>
+</html>

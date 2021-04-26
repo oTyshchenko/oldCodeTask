@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let numbers = document.getElementsByTagName('td');
+            function editTd() {
+                this.removeEventListener('click', editTd);
+                let x = this;
+                x.innerHTML = '';
+                let newInput = document.createElement('input');
+                let newBtn = document.createElement('button');
+                newInput.placeholder = 'new value'
+                newBtn.innerHTML = 'save';
+                x.appendChild(newInput);
+                x.appendChild(newBtn);
+                newBtn.addEventListener('mouseup', newValue);
+                function newValue() {
+                    x.innerHTML = newInput.value;
+                    x.addEventListener('click', editTd)
+                }
+            }
+            for (let i = 0; i < numbers.length; i++) {
+                numbers[i].addEventListener('click', editTd);
+            }
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>25</td>
+            <td>11</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>54</td>
+            <td>13</td>
+            <td>22</td>
+        </tr>
+        <tr>
+            <td>15</td>
+            <td>23</td>
+            <td>6</td>
+        </tr>
+    </table>
+</body>
+</html>
