@@ -1,0 +1,48 @@
+@import 'reset.scss';
+
+.game {
+    margin: 8px auto 18px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 156px;
+    border: 1px solid black;
+
+    .cell {
+        padding: 10px;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 30px;
+        border: 1px solid black;
+        cursor: pointer;
+        transition: background 0.5s;
+
+        &:hover {
+            background: silver;
+        }
+    }
+}
+
+.turn {
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.restart {
+    display: block;
+    margin: 0 auto;
+}
+
+.statistic {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 0 20px;
+    width: 120px;
+    height: 120px;
+    border: 1px solid black;
+}

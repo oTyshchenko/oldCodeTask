@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let ggg = function(n, f) { 
+                return f(n);
+            }
+            newFunc = function(a) {
+                return a**2;
+            }
+            let num = 2;
+            console.log(ggg(ggg(num, newFunc),newFunc))
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

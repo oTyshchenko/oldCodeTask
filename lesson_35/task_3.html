@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let ggg = function (a,b) {
+                return a() + b();
+            };
+            let x = function () {
+                return 3;
+            };
+            let y = function () {
+                return 4;
+            };
+            console.log(ggg(x,y));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

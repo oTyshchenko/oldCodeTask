@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let each = function (arr, f) {
+                return f(arr);
+            };
+            let a = function (arr) {
+                let arr2 = [];
+                for (let i = 0; i < arr.length; i++) {
+                    arr2[i] = arr[i] * 2;                    
+                };
+                return arr2;
+            }
+            let x = [6,2,3];
+            console.log(each(x,a));
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

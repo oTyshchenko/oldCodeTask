@@ -1,0 +1,63 @@
+@import 'reset.scss';
+
+.calculator {
+    margin: 10px auto;
+    padding: 5px;
+    width: 200px;
+    border: 1px solid black;
+
+    .display {
+        position: relative;
+        margin: 5px auto;
+        width: 190px;
+        height: 30px;
+        border: 1px solid black;
+
+        .reset {
+            position: absolute;
+            transform: translate(20%, -50%);
+            top: 50%;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border: 1px solid black;
+            cursor: pointer;
+            font-family: 'Times New Roman', Times, serif;
+
+            &:hover {
+                color: white;
+                background: black;
+                
+            }
+        }
+
+        .result {
+            padding: 0 3px;
+            width: calc(100% - 10px);
+            height: 100%;
+            text-align: right;
+            background: white;
+        }
+    }
+
+    .btn-box {
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+
+        .btn {
+            margin: 5px;
+            width: 40px;
+            height: 30px;
+            background: white;
+            border: 1px solid black;
+            cursor: pointer;
+
+            &:hover {
+                color: white;
+                background: black;
+                
+            }
+        }
+    }
+}

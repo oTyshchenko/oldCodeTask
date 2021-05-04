@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let inputs = document.getElementsByTagName('input');
+            let createHistory = function () {
+                let arr = [];
+                return function () {
+                    arr.push(this.value);
+                    console.log(arr)
+                    this.previousElementSibling.addEventListener('click', goBack);
+                    function goBack () {
+                        let d function () {
+                            console.log(arr)
+                            this.nextElementSibling.value = arr[arr.length - 1]; 
+                         }
+                    }
+                }
+            }
+            for (let i = 0; i < inputs.length; i++) {
+                inputs[i].addEventListener('change', createHistory());
+            }
+        };
+    </script>
+</head>
+<body>
+    <button><</button><input type="text"><button>></button><br>
+    <button><</button><input type="text"><button>></button><br>
+    <button><</button><input type="text"><button>></button><br>
+    
+</body>
+</html>

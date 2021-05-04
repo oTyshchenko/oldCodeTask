@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let pars = document.getElementsByTagName('p');
+            let colors = ['red', 'green', 'black', 'blue'];
+            let changeColor = function () {
+                let num = 0;
+                return function () {
+                    this.style.color = colors[num % colors.length];
+                    num++;
+                };     
+            };
+            for (let i = 0; i < pars.length; i++) {
+                pars[i].addEventListener('click', changeColor());                
+            };
+        };
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque enim error cumque tempore suscipit animi totam repellat natus, ut aliquam quisquam quae dolor magni ullam impedit sapiente! Vel, odio tempora.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque enim error cumque tempore suscipit animi totam repellat natus, ut aliquam quisquam quae dolor magni ullam impedit sapiente! Vel, odio tempora.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque enim error cumque tempore suscipit animi totam repellat natus, ut aliquam quisquam quae dolor magni ullam impedit sapiente! Vel, odio tempora.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque enim error cumque tempore suscipit animi totam repellat natus, ut aliquam quisquam quae dolor magni ullam impedit sapiente! Vel, odio tempora.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque enim error cumque tempore suscipit animi totam repellat natus, ut aliquam quisquam quae dolor magni ullam impedit sapiente! Vel, odio tempora.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque enim error cumque tempore suscipit animi totam repellat natus, ut aliquam quisquam quae dolor magni ullam impedit sapiente! Vel, odio tempora.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque enim error cumque tempore suscipit animi totam repellat natus, ut aliquam quisquam quae dolor magni ullam impedit sapiente! Vel, odio tempora.</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque enim error cumque tempore suscipit animi totam repellat natus, ut aliquam quisquam quae dolor magni ullam impedit sapiente! Vel, odio tempora.</p>
+</body>
+</html>

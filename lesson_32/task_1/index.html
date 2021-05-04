@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style/css/style.css">
+    <script>
+        window.onload = function calculator() {
+            let result = document.getElementById('result');
+            let reset = document.getElementById('reset');
+            let btns = document.getElementsByClassName('x');
+            let gResult = document.getElementById('gResult');
+            function getResult() {
+                result.value = eval(result.value);
+            }
+            function editDisplay() {
+                result.value = result.value + this.value;
+            }
+            function clearDisplay() {
+                result.value = '';
+            }
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].addEventListener('click', editDisplay);                
+            }
+            gResult.addEventListener('click', getResult)
+            reset.addEventListener('click', clearDisplay)
+        }
+    </script>
+</head>
+<body>
+    <div class="calculator">
+        <form class="display">
+            <input type="button" value="C" class="reset" id="reset">
+            <input type="text" class="result" id="result" disabled>        
+        </form>
+        <div class="btn-box">
+            <input type="button" value="7" class="btn x">
+            <input type="button" value="8" class="btn x">
+            <input type="button" value="9" class="btn x">
+            <input type="button" value="/" class="btn x">
+            <input type="button" value="4" class="btn x">
+            <input type="button" value="5" class="btn x">
+            <input type="button" value="6" class="btn x">
+            <input type="button" value="*" class="btn x">
+            <input type="button" value="1" class="btn x">
+            <input type="button" value="2" class="btn x">
+            <input type="button" value="3" class="btn x">
+            <input type="button" value="-" class="btn x">
+            <input type="button" value="0" class="btn x">
+            <input type="button" value="." class="btn x">
+            <input type="button" value="=" class="btn" id="gResult">
+            <input type="button" value="+" class="btn x">
+        </div>
+    </div>
+</body>
+</html>

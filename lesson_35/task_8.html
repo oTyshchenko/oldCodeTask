@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let createCounter = function () {
+                let num = 0;
+                return function () {
+                    num++;
+                    this.innerHTML = num
+                    return num;
+                };
+            };
+            let btns = document.getElementsByTagName('button');
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].addEventListener('click', createCounter(this));
+            };
+        }
+    </script>
+</head>
+<body>
+    <button>0</button>
+    <button>0</button>
+    <button>0</button>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script>
+        window.onload = function() {
+            let btns = document.getElementsByTagName('button');
+            let fibonaciNubber = function () {
+                let a = 1;
+                let b = 2;
+                let summ;
+                return function () {
+                    this.innerHTML = a;
+                    summ = a;
+                    a = b;
+                    b = summ + a;
+                }
+                
+            };
+            for (let i = 0; i < btns.length; i++) {
+                btns[i].addEventListener('click', fibonaciNubber());
+            };
+        };
+    </script>
+</head>
+<body>
+    <button>0</button><button>0</button><button>0</button>
+</body>
+</html>
